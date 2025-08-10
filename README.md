@@ -1,26 +1,36 @@
-<h3 align="center">
-	<img src="https://raw.githubusercontent.com/wavim/&pack/master/media/icon.png" width="130" alt="&pack icon" /><br />
-	&pack
-</h3>
-<p align="center">&pack desc</p>
-
----
-
 ### Usage
 
 Install this package in your project:
 
 ```bash
 # via npm
-npm add &pack
+npm add @wavim/solid-filter
 
 # or pnpm
-pnpm add &pack
+pnpm add @wavim/solid-filter
 
 # or yarn
-yarn add &pack
+yarn add @wavim/solid-filter
 ```
 
----
+Use the component in your application:
 
-_&emsp;_ &pack
+```tsx
+import Filter from "@wavim/solid-filter";
+
+interface FilterProps
+{
+	candidates: T[];
+	predicates: ((candidate: T) => boolean)[];
+
+	fallback?: JSXElement;
+	children?: (candidate: T, i: Accessor<number>) => JSXElement;
+}
+
+<Filter
+	candidates={[...]}
+	predicates={[...]}
+	fallback={...}
+	children={...}
+/>
+```

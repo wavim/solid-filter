@@ -1,39 +1,54 @@
 {
-	"name": "@wavim/&pack",
-	"version": "0.0.0-res",
-	"description": "&pack",
+	"name": "@wavim/solid-filter",
+	"version": "1.0.0",
+	"description": "SolidJS Filter Component",
 	"lint-staged": {
 		"*.ts": [
 			"eslint --fix --no-warn-ignored --max-warnings=0",
 			"prettier --write"
 		]
 	},
-	"repository": "github:wavim/&pack",
+	"repository": "github:wavim/solid-filter",
 	"license": "MIT",
-	"keywords": [],
-	"main": "dist/index.cjs",
-	"module": "dist/index.mjs",
-	"types": "dist/index.d.ts",
+	"keywords": [
+		"solid-js",
+		"filter",
+		"list"
+	],
+	"source": "src/index.tsx",
+	"module": "dist/esm/index.js",
+	"types": "dist/types/index.d.ts",
+	"files": [
+		"dist"
+	],
 	"exports": {
-		"require": "./dist/index.cjs",
-		"import": "./dist/index.mjs",
-		"types": "./dist/index.d.ts"
+		".": {
+			"solid": "./dist/source/index.jsx",
+			"types": "./dist/types/index.d.ts",
+			"import": "./dist/esm/index.js"
+		}
 	},
 	"scripts": {
 		"prepublish": "pnpm run build",
 		"prepare": "husky",
-		"build": "pkgroll --clean-dist --minify",
-		"watch": "pkgroll --watch"
+		"build": "rollup -c"
+	},
+	"peerDependencies": {
+		"solid-js": "^1.9.8"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.33.0",
+		"@rollup/plugin-terser": "^0.4.4",
 		"@stylistic/eslint-plugin": "^5.2.3",
 		"eslint": "^9.33.0",
 		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-solid": "^0.14.5",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.1.5",
-		"pkgroll": "^2.15.3",
 		"prettier": "^3.6.2",
+		"rollup": "^4.46.2",
+		"rollup-preset-solid": "^3.0.0",
+		"solid-js": "^1.9.8",
 		"typescript": "^5.9.2",
 		"typescript-eslint": "^8.39.0"
 	},
