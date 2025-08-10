@@ -1,0 +1,15 @@
+{
+	"include": ["src/**/*"],
+
+	"compilerOptions": {
+		"strict": true,
+
+		"target": "ESNext",
+		"module": "ESNext",
+
+		"moduleResolution": "bundler",
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	}
+}
