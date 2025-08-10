@@ -1,6 +1,6 @@
 {
 	"name": "@wavim/solid-filter",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "SolidJS Filter Component",
 	"lint-staged": {
 		"*.ts": [
@@ -15,8 +15,7 @@
 		"filter",
 		"list"
 	],
-	"source": "src/index.tsx",
-	"module": "dist/esm/index.js",
+	"module": "dist/index.js",
 	"types": "dist/types/index.d.ts",
 	"files": [
 		"dist"
@@ -25,7 +24,7 @@
 		".": {
 			"solid": "./dist/source/index.jsx",
 			"types": "./dist/types/index.d.ts",
-			"import": "./dist/esm/index.js"
+			"import": "./dist/index.js"
 		}
 	},
 	"scripts": {
