@@ -18,10 +18,10 @@ Use the component in your application:
 ```tsx
 import Filter from "@wavim/solid-filter";
 
-interface FilterProps
+interface FilterProps<T>
 {
-	candidates: T[];
-	predicates: ((candidate: T) => boolean)[];
+	candidates: Array<T>;
+	predicates: Array<(candidate: T, i: number, arr: T[]) => boolean>;
 
 	fallback?: JSXElement;
 	children?: (candidate: T, i: Accessor<number>) => JSXElement;
